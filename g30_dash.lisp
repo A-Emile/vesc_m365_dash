@@ -116,6 +116,9 @@
                 (if (not (= brake 0))
                     (set-brake-rel brake)
                 )
+		(if (not (= brake 0))
+                    (set-current-rel 0) ; No throttle input when brake is pressed
+                )
             )
             (progn
                 (set-current-rel 0) ; No throttle input when off or locked
